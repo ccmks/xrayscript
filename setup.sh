@@ -21,8 +21,8 @@ BURIQ () {
     rm -f  /root/tmp
 }
 #https://raw.githubusercontent.com/hokagelegend9999/ijin/main/original 
-MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/hokagelegend9999/ijin/main/original | grep $MYIP | awk '{print $2}')
+MYIP=$1
+Name=$1
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -38,8 +38,8 @@ fi
 }
 
 PERMISSION () {
-    MYIP=1
-    IZIN=1
+    MYIP=$1
+    IZIN=$1
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
