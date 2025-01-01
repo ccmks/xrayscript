@@ -38,8 +38,8 @@ fi
 }
 
 PERMISSION () {
-    MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/hokagelegend9999/ijin/main/original | awk '{print $4}' | grep $MYIP)
+    MYIP=1
+    IZIN=1
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
